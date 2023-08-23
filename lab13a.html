@@ -1,0 +1,63 @@
+<!DOCTYPE html> 
+<title>Program 13a</title> 
+<style type="text/css"> 
+.layer1Style 
+{ 
+border: solid thick black; 
+padding: 1em; 
+width:300px; 
+background-color:yellow; 
+position:absolute; 
+top:120px; 
+left:200px;
+z-index:0; 
+} 
+.layer2Style 
+{ 
+border: solid thick red; 
+padding: 1em; 
+width:300px; 
+background-color:BLUE; 
+position:absolute; 
+top:140px; 
+left:220px; 
+z-index:0; 
+} 
+.layer3Style 
+{ 
+border: solid thick green; 
+padding: 1em; 
+width:300px; 
+background-color:purple; 
+position:absolute; 
+top:160px; 
+left:240px; 
+z-index:0; 
+} 
+</style> 
+<script type="text/javascript"> 
+var topLayer="layer3"; 
+function mover(toTop) 
+{ 
+var oldTop=document.getElementById(topLayer).style; var newTop=document.getElementById(toTop).style; oldTop.zIndex="0"; 
+newTop.zIndex="10"; 
+topLayer=document.getElementById(toTop).id; } 
+</script> 
+</head> 
+<body> 
+
+<h3><i>Thrishik Shetty<br/>4MT21IS056</i></h3>
+<h2>Stacking of Paragraphs</h2> 
+<div style="z-index: 10;" class="layer1Style" id="layer1"  onmouseover="mover('layer1')"> 
+ The Greedy Dog's Lesson:
+Once upon a time, there was a dog who found a bone in the garden. The dog was very excited and picked up the bone, but as he was crossing a bridge over a river, he looked down and saw his reflection in the water. He thought it was another dog with an even bigger bone. Greedily, he decided to snatch the other dog's bone as well. He opened his mouth to bark, but as he did, his own bone fell into the river, disappearing forever. The dog learned that his greed had cost him his prized possession, teaching him the value of what he already had.
+</div> 
+<div style="z-index: 2;" class="layer2Style" id="layer2" onmouseover="mover('layer2')">
+In a dense forest, a poor woodcutter accidentally dropped his axe into a deep pond. Distraught, he sat by the pond, wondering how he would support his family without the tool of his trade. Suddenly, a fairy appeared, asking what was wrong. The woodcutter explained his predicament, and the fairy dove into the water, bringing up a golden axe and asking if it was his. The woodcutter honestly replied that it wasn't. Impressed by his honesty, the fairy rewarded him with the golden axe and his own lost axe. The woodcutter's integrity had won him a far greater reward than deceit ever could.
+</div> 
+<div style="z-index: 0;" class="layer3Style" id="layer3" 
+onmouseover="mover('layer3')"> 
+Two friends were walking through the forest when they encountered a fierce bear. One of them quickly climbed a tree to save himself, while the other, unable to climb, lay on the ground and pretended to be dead, holding his breath. The bear sniffed around the motionless man and, finding no movement, left him alone, thinking he was dead. Once the bear was gone, the friend in the tree climbed down and asked his companion what the bear had whispered to him. The man replied, "The bear warned me to be cautious of friends who desert you in times of need." This story teaches the importance of loyalty and support in times of adversity.
+</div> 
+</body> 
+</html> 
